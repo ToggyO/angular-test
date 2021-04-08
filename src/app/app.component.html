@@ -1,0 +1,43 @@
+<header>
+    <nav>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a routerLink="/">На главную</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/login">Форма для логина</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/sign-up">Форма для регистрации</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/users">Пользователи</a>
+        </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="['item', '5']"
+               [queryParams]="{'product':'phone', 'price': 200}">item 5</a>
+        </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="['item', '8']"
+               [queryParams]="{'product':'tablet'}">item 8</a>
+        </li>
+    </nav>
+</header>
+<hr />
+<app-items-comp></app-items-comp>
+<router-outlet></router-outlet>
+<!--<div>Some counter: {{counter}}</div>-->
+<!--<purchase [title]="title" (onIncremented)="increment()">-->
+<!--    <h1 #headerContent>Initial content</h1>-->
+<!--</purchase>-->
+<!--<button (click)="addItem()">Add test 69</button>-->
+<!--<hr />-->
+<!--<div *while="!condition">Toggled block</div>-->
+<!--<button (click)="toggleCondition()">Change condition</button>-->
+<!--<hr />-->
+<!--<data-comp></data-comp>-->
+<!--<hr />-->
+<!--<form-component></form-component>-->
+<!--<hr />-->
+<!--<login-comp></login-comp>-->
+<!--<registration-comp></registration-comp>-->
+<!--<users-comp></users-comp>-->

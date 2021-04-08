@@ -1,0 +1,16 @@
+{
+  "usersList":
+  [{
+    "userName": "Bob",
+    "userEmail": "qwe@qwe.com",
+    "userPhone": 345363468
+  },{
+    "userName": "Tom",
+    "userEmail": "asd@asd.com",
+    "userPhone": 877122353
+  },{
+    "userName": "Alice",
+    "userEmail": "qwerty@mail.com",
+    "userPhone": 874646565
+  }]
+}

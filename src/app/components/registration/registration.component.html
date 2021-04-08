@@ -1,0 +1,35 @@
+<form [formGroup]="registrationForm" novalidate (ngSubmit)="submit()">
+    <div class="form-group">
+        <label>Имя</label>
+        <input class="form-control" name="name" formControlName="userName" />
+
+        <div class="alert alert-danger"
+             *ngIf="registrationForm.controls['userName'].invalid && registrationForm.controls['userName'].touched">
+            Не указано имя
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" name="email" formControlName="userEmail" />
+
+        <div class="alert alert-danger"
+             *ngIf="registrationForm.controls['userEmail'].invalid && registrationForm.controls['userEmail'].touched">
+            Некорректный email
+        </div>
+    </div>
+    <div formArrayName="phones">
+<!--        <div class="form-group" *ngFor="let phone of userPhones?.get('controls')?.value; let i = index">-->
+        <div class="form-group" *ngFor="let phone of registrationForm.controls?.phones?.value; let i = index">
+            <label>Телефон</label>
+            <input class="form-control" formControlName="{{i}}" />
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" (click)="addPhone()">
+            Добавить телефон
+        </button>
+        <button class="btn btn-default" [disabled]="registrationForm.invalid">
+            Отправить
+        </button>
+    </div>
+</form>
